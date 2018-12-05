@@ -7,14 +7,10 @@
 
 int main(int argc, char *argv[])
 {
-char line[100];
-printf("Enter a string: ");
-fgets(line, 100, stdin);
-printf("Your string is %s", line);
-
+const char* line = "test";
 printf("\nDiving to kernel level\n\n");
-int result = syscall(_ENSC351_TEST_, line);
-printf("\nRising to user level w/ result = %d\n\n", result);
+syscall(_ENSC351_TEST_, line);
+syscall(_ENSC351_TEST_, line);
 
 return 0;
 }
