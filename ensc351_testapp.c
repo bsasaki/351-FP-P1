@@ -10,7 +10,6 @@ int main(int argc, char *argv[])
 const char* line = "test";
 printf("\nDiving to kernel level\n\n");
 syscall(_ENSC351_TEST_, line);
-syscall(_ENSC351_TEST_, line);
 
 return 0;
 }
